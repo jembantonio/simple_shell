@@ -5,6 +5,7 @@ int main(int ac, char **av)
 {
 	int i;
 	int count = 0;
+        int c = ac;
 
 	if (ac)
 	for (i = 0; i < ac; i++)
