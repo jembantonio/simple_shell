@@ -5,7 +5,7 @@ int main(int ac, char **av)
 {
         int i = 1, count = ac;
 
-        while (count)
+        while (i < count)
                 printf("%s\n", av[i]);
                 i++;
 }
