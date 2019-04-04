@@ -3,8 +3,9 @@
 
 int main(int ac, char **av)
 {
-        int i =0;
+        int i = 1, count = ac;
 
-        while (av)
+        while (count)
                 printf("%s\n", av[i]);
+                i++;
 }
