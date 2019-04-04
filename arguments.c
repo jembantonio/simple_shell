@@ -3,9 +3,15 @@
 
 int main(int ac, char **av)
 {
-        int i = 1, count = ac;
+	int i;
+	int count = 0;
 
-        while (i < count)
-                printf("%s\n", av[i]);
-                i++;
+	if (ac)
+	for (i = 0; i < ac; i++)
+	{
+		av++;
+		count++;
+	}
+		printf("%d\n", count - 1);
+	return (0);
 }
