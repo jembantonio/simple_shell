@@ -7,10 +7,17 @@ int main ()
 
 	while (1)
 	{
+		/* fork process */
 		_strprnt("$ ");
+
+		line = NULL;
+		size = 0;
+
 		getline(&line, &size, stdin);
-		_strprnt(line);
 		tokenize(line);
+		_strprnt(line);
+		_strprnt("\n");
+		free(line);
 	}
 
 	return (EXIT_SUCCESS);

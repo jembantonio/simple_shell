@@ -2,17 +2,6 @@
 
 #define DELIM " \t\n"
 
-
-char **tokenize (char *line)
-{
-	size_t n;
-
-	n = token_count(line);
-	printf("n = %ld\n", n);
-	return (NULL);
-}
-
-
 size_t token_count(const char *line)
 {
 	size_t count;
@@ -48,4 +37,47 @@ char find_delim(const char c)
 		index++;
 	}
 	return (0);
+}
+
+void tokenize_string(char **arrstr, char *line)
+{
+	char *token;
+	size_t index;
+
+	index = 0;
+	token = strtok(line, DELIM);
+	while (token)
+	{
+		arrstr[index] = token;
+		index++;
+		token = strtok(NULL, DELIM);
+	}
+	arrstr[index] = NULL;
+}
+
+void print_tokenizestr(char **arrstr)
+{
+	size_t index;
+
+	index = 0;
+	while (arrstr[index] != NULL)
+	{
+		_strprnt(arrstr[index]);
+		_strprnt("\n");
+		index++;
+	}
+}
+
+char **tokenize (char *line)
+{
+        size_t n;
+        char **arrstr;
+
+        n = token_count(line);
+        arrstr = malloc(sizeof(*arrstr) * (n + 1));
+        /* check for if malloc fails with NULL case */
+	tokenize_string(arrstr, line);
+        printf("n = %ld\n", n);
+        print_tokenizestr(arrstr);
+        return (NULL);
 }
