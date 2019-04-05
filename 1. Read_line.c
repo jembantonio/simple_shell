@@ -6,7 +6,7 @@ int main ()
 {
         /* line_cmd */
         char *line_cmd;
-        /*size of line_cmd */
+        /*getline will auto allocate space (n) needed for line_cmd */
         size_t n;
 
 
@@ -27,6 +27,7 @@ int _strlen(const char *str)
         return (len);
 }
 
+/* converted vers of putchar(c), which prints a str instead */
 int _printstring (char *str)
 {
         return (write(1, str, _strlen(str)));
