@@ -9,5 +9,6 @@
 
 int _strprnt (char *str);
 int _strlen (const char *str);
+int _printstring (char *str);
 
 #endif
