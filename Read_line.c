@@ -4,18 +4,17 @@
 
 int main ()
 {
-        /* buffer */
-        char *buffer;
-        /*size of buffer */
+        /* line_cmd */
+        char *line_cmd;
+        /*size of line_cmd */
         size_t *n = 1024;
 
-        char *commands;
 
         _printstring("$ ");
         /* getline(char **lineptr, size_t *n, FILE *stream) */
-        /* getline(&buffer,&size,stdin) */
-        commands = getline(&buffer,&n,stdin);
-        _printstring(commands);
+        /* getline(&line_cmd,&size,stdin) */
+        getline(&line_cmd,&n,stdin);
+        _printstring(line_cmd);
 
 }
 
