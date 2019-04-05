@@ -45,11 +45,16 @@ void tokenize_string(char **arrstr, char *line)
 	size_t index;
 
 	index = 0;
+
+	/* first call of isolates sequential tokens based on delimeter and puts a NULL terminating byte at the end */
+	/* first time strtok, string should be specified */
 	token = strtok(line, DELIM);
 	while (token)
 	{
+		/* tokenizes the very first string in the array of strings */
 		arrstr[index] = token;
 		index++;
+		/* subsequent calls for obtaining the other tokens should pass a NULL pointer instead */
 		token = strtok(NULL, DELIM);
 	}
 	arrstr[index] = NULL;
@@ -73,11 +78,18 @@ char **tokenize (char *line)
         size_t n;
         char **arrstr;
 
+	/* function that counts the tokens from user input */
         n = token_count(line);
+	
+	/* allocate memory for array of strings from user input */
         arrstr = malloc(sizeof(*arrstr) * (n + 1));
-        /* check for if malloc fails with NULL case */
+	/* TODO: check for if malloc fails with NULL case */
+	/* function that uses strtok to split the getline into different tokens based on delimeter and fills the allocated array with those tokens */
 	tokenize_string(arrstr, line);
+
+	/* testing */
         printf("n = %ld\n", n);
         print_tokenizestr(arrstr);
-        return (NULL);
+       
+	 return (NULL);
 }
