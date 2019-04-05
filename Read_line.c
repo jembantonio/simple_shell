@@ -7,7 +7,7 @@ int main ()
         /* line_cmd */
         char *line_cmd;
         /*size of line_cmd */
-        size_t *n = 1024;
+        size_t n;
 
 
         _printstring("$ ");
