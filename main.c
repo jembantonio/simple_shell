@@ -19,6 +19,9 @@ int main ()
 		/* gets line from user input stores it into a char * */
 		getline(&line, &size, stdin);
 
+		/* Fork process goes here */
+		
+
 		/* function that tokenizes the user input into seperate tokens seperated by a NULL terminating byte */
 		arrstr = tokenize(line);
 
