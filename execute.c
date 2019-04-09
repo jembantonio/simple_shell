@@ -1,4 +1,4 @@
-#include "shell.h"
+include "shell.h"
 
 char *_getenv(char **env, char *key)
 {
@@ -14,7 +14,7 @@ char *_getenv(char **env, char *key)
 	return (NULL);
 }
 
-char *find_cmd(char *cmd, char **env)
+char *find_path(char *cmd, char **env)
 {
 	char *path = NULL;
 	char *env_path;
@@ -67,7 +67,7 @@ int exec_cmd(char **argv, char **env)
 		return (-1);
 	}
 
-	path = find_cmd(argv[0], env);
+	path = find_path(argv[0], env);
 	if (!path)
 	{
 		_strprnt("no such file or directory\n");
