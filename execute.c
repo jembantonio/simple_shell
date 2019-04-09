@@ -22,6 +22,8 @@ char *find_cmd(char *cmd, char **env)
 	env_path = _getenv(env, "PATH=");
 	if (!env_path)
 		return (NULL);
+	
+	printf("PATH => %s", env_path);	
 
 	free(env_path);
 	(void)cmd;
