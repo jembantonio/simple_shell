@@ -59,7 +59,7 @@ void tokenize_string(char **arrstr, char *line)
 	}
 	arrstr[index] = NULL;
 }
-
+/* 
 void print_tokenizestr(char **arrstr)
 {
 	size_t index;
@@ -72,6 +72,7 @@ void print_tokenizestr(char **arrstr)
 		index++;
 	}
 }
+*/
 
 char **tokenize (char *line)
 {
@@ -88,8 +89,7 @@ char **tokenize (char *line)
 	tokenize_string(arrstr, line);
 
 	/* testing */
-        printf("n = %ld\n", n);
         print_tokenizestr(arrstr);
        
-	 return (NULL);
+	return (arrstr);
 }
