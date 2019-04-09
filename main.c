@@ -8,7 +8,7 @@ int main ()
 
 	while (1)
 	{
-		/* TODO: fork process */
+		/* TODO: fork process  */
 
 		line = NULL;
 		size = 0;
@@ -25,6 +25,7 @@ int main ()
 		if (child == 0)
 		{
 			/* tokenize the stdin */
+			
 			token_count(line);
 			printf("i am child");
 

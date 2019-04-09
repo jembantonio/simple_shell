@@ -15,4 +15,5 @@ int _strlen (const char *str)
 		len++;
 
 	return (len);
+	
 }
