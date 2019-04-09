@@ -9,6 +9,11 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
+typedef struct path
+{
+	char *str; 
+	struct path *next;
+} get_path;
 
 int _strprnt (char *str);
 int _strlen (const char *str);
