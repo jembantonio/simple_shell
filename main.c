@@ -1,56 +1,37 @@
 #include "shell.h"
 
-int main ()
+int main (int ac, char **av, char **env)
 {
 	char *line;
-	char **arrstr;
+	char **args;
 	size_t size;
 
 	while (1)
 	{
-		/* TODO: fork process  */
-
 		line = NULL;
 		size = 0;
-		pid_t child = fork();
-		int i = 0;
 
 
-		/* prints prompt */		
+		/* prints prompt */
 		_strprnt("$ ");
 		/* gets line from user input stores it into a char * */
+
 		getline(&line, &size, stdin);
-	
-		/* Fork process goes here */
-		if (child == 0)
+
+		/* function that tokenizes the user input into seperate tokens
+		seperated by a NULL terminating byte */
+		args = tokenize(line);
+
+		if (args != NULL)
 		{
-			/* tokenize the stdin */
-			
-			token_count(line);
-			printf("i am child");
-
-
+			exec_cmd(args, env);
 		}
-		else
-		{
-			_strprnt("$ ");
-			wait (NULL);
-		}
-		
-		
-
-		/* function that tokenizes the user input into seperate tokens seperated by a NULL terminating byte */
-		arrstr = tokenize(line);
-
-		/* test */
-		_strprnt(line);
-		_strprnt("\n");
-
-
 		/* free line and arrstr */
 		free(line);
-		free(arrstr);
+		free(args);
 	}
-
+	(void)ac;
+	(void)av;
 	return (EXIT_SUCCESS);
 }
+

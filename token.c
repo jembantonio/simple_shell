@@ -9,7 +9,6 @@ size_t token_count(const char *line)
 
 	count = 0;
 	index = 0;
-	
 
 	while (line[index])
 	{
@@ -17,7 +16,9 @@ size_t token_count(const char *line)
 			index++;
 		if (line[index] == '\0')
 			break;
+
 		count++;
+
 		while(!find_delim(line[index]))
 			index++;
 	}
@@ -61,6 +62,8 @@ void tokenize_string(char **arrstr, char *line)
 	arrstr[index] = NULL;
 }
 
+/*
+
 void print_tokenizestr(char **arrstr)
 {
 	size_t index;
@@ -74,6 +77,8 @@ void print_tokenizestr(char **arrstr)
 	}
 }
 
+*/
+
 char **tokenize (char *line)
 {
         size_t n;
@@ -81,16 +86,18 @@ char **tokenize (char *line)
 
 	/* function that counts the tokens from user input */
         n = token_count(line);
-	
+	if (n == 0)
+		return (NULL);
 	/* allocate memory for array of strings from user input */
         arrstr = malloc(sizeof(*arrstr) * (n + 1));
+
 	/* TODO: check for if malloc fails with NULL case */
 	/* function that uses strtok to split the getline into different tokens based on delimeter and fills the allocated array with those tokens */
 	tokenize_string(arrstr, line);
 
-	/* testing */
-        printf("n = %ld\n", n);
-        print_tokenizestr(arrstr);
-       
-	 return (NULL);
+        /* printf("n = %ld\n", n); */
+        /* print_tokenizestr(arrstr); */
+
+	 return (arrstr);
 }
+
