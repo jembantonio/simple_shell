@@ -14,5 +14,4 @@ char **tokenize (char *line);
 char find_delim(const char c);
 size_t token_count(const char *line);
 void print_tokenizestr(char **arrstr);
-
 #endif
