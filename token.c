@@ -76,7 +76,6 @@ void print_tokenizestr(char **arrstr)
 }
 */
 
-*/
 
 char **tokenize (char *line)
 {
