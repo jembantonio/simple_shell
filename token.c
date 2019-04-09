@@ -61,9 +61,7 @@ void tokenize_string(char **arrstr, char *line)
 	}
 	arrstr[index] = NULL;
 }
-
-/*
-
+/* 
 void print_tokenizestr(char **arrstr)
 {
 	size_t index;
@@ -76,6 +74,7 @@ void print_tokenizestr(char **arrstr)
 		index++;
 	}
 }
+*/
 
 */
 
@@ -95,9 +94,9 @@ char **tokenize (char *line)
 	/* function that uses strtok to split the getline into different tokens based on delimeter and fills the allocated array with those tokens */
 	tokenize_string(arrstr, line);
 
-        /* printf("n = %ld\n", n); */
-        /* print_tokenizestr(arrstr); */
-
-	 return (arrstr);
+	/* testing */
+        print_tokenizestr(arrstr);
+       
+	return (arrstr);
 }
 

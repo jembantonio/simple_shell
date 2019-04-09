@@ -5,6 +5,7 @@ int main (int ac, char **av, char **env)
 	char *line;
 	char **args;
 	size_t size;
+	int status;
 
 	while (1)
 	{
@@ -24,7 +25,7 @@ int main (int ac, char **av, char **env)
 
 		if (args != NULL)
 		{
-			exec_cmd(args, env);
+			status = exec_cmd(args, env);
 		}
 		/* free line and arrstr */
 		free(line);
@@ -32,6 +33,6 @@ int main (int ac, char **av, char **env)
 	}
 	(void)ac;
 	(void)av;
-	return (EXIT_SUCCESS);
+	return (status);
 }
 
