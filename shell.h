@@ -9,7 +9,13 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
+typedef struct cmd
+{
+	char *cmd;
+	int (*f)(char *str);
+} cmd_struct;
 
+// TO-DO .. Jeremy will be adding the protoype for function get_path
 int _strprnt (char *str);
 int _strlen (const char *str);
 char **tokenize (char *line);
@@ -21,7 +27,6 @@ void _strcpy(char *dest, const char *src, size_t n);
 char *_strdup(const char *s);
 char *_getenv(char **env, char *key);
 char *find_cmd(char *cmd, char **env);
-
-
+int (*cmd_funs(char *cmd))(char *str);
 #endif
 
