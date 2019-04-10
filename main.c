@@ -21,7 +21,7 @@ int main (int ac, char **av, char **env)
 
 		/* function that tokenizes the user input into seperate tokens
 		seperated by a NULL terminating byte */
-		args = tokenize(line);
+		args = tokenize(line, " \t\n");
 
 		if (args != NULL)
 		{

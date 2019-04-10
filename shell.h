@@ -10,9 +10,9 @@
 #include <sys/wait.h>
 
 /* PROGRAM FUNCTIONS */
-char **tokenize (char *line);
-char find_delim(const char c);
-size_t token_count(const char *line);
+char **tokenize (char *line, const char *delim);
+char find_delim(const char c, const char *delim);
+size_t token_count(const char *line, const char *delim);
 void print_tokenizestr(char **arrstr);
 int exec_cmd(char **argv, char **envp);
 int run_cmd(const char *path, char **argv, char **env);
