@@ -88,8 +88,8 @@ char **tokenize (char *line)
 	/* function that uses strtok to split the getline into different tokens based on delimeter and fills the allocated array with those tokens */
 	tokenize_string(arrstr, line);
 
-	/* testing */
-        print_tokenizestr(arrstr);
+	/* testing 
+        print_tokenizestr(arrstr); */
        
 	return (arrstr);
 }

@@ -9,17 +9,23 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-
-int _strprnt (char *str);
-int _strlen (const char *str);
+/* PROGRAM FUNCTIONS */
 char **tokenize (char *line);
 char find_delim(const char c);
 size_t token_count(const char *line);
 void print_tokenizestr(char **arrstr);
 int exec_cmd(char **argv, char **envp);
+int run_cmd(const char *path, char **argv, char **env);
+char *find_path(char *cmd, char **env);
+char *_getenv(char **env, char *key);
+
+
+
+/* STRING FUNCTIONS */
 int _strcmp(char *s1, const char *s2, int n);
 void _strcpy(char *dest, const char *src, size_t n);
 char *_strdup(const char *s);
-
+int _strlen (const char *str);
+int _strprnt (char *str);
 
 #endif
