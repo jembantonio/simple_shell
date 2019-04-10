@@ -38,7 +38,7 @@ int exec_cmd(char **argv, char **env)
 		return (-1);
 	}
 
-	path = find_cmd(argv[0], env);
+	// path = find_cmd(argv[0], env);
 	if (!path)
 	{
 		_strprnt("no such file or directory\n");

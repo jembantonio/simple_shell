@@ -27,6 +27,8 @@ void _strcpy(char *dest, const char *src, size_t n);
 char *_strdup(const char *s);
 char *_getenv(char **env, char *key);
 char *find_cmd(char *cmd, char **env);
-int (*cmd_funs(char *cmd))(char *str);
+int (*builtin_struct(char *cmd))(char *str);
+void _printPrompt(); // This is a function that im testing out
+void exit_builtin();
 #endif
 

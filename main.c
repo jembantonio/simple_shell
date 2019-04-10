@@ -14,7 +14,7 @@ int main (int ac, char **av, char **env)
 
 
 		/* prints prompt */
-		_strprnt("$ ");
+		_printPrompt();
 		/* gets line from user input stores it into a char * */
 
 		getline(&line, &size, stdin);

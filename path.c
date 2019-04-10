@@ -31,6 +31,16 @@
 	envp[i] = NULL;
 } */
 
+// I added this function to handle printing the shell prompt for Jeremy to review
+void _printPrompt() 
+{ 
+    char cwd[1024]; 
+    getcwd(cwd, sizeof(cwd)); 
+    write(STDOUT_FILENO, cwd, _strlen(cwd)); 
+    write(STDOUT_FILENO, "$ ", 2);
+} 
+
+
 char *_getenv(char **env, char *key)
 {
 	size_t i;
