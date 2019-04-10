@@ -25,6 +25,15 @@ char *_strdup(const char *s);
 char *_getenv(char **env, char *key);
 char *find_cmd(char *cmd, char **env);
 
+int processString(char* str, char** parsed, char** parsedpipe);
+void parseSpace(char* str, char** parsed);
+int parsePipe(char* str, char** strpiped);
+int ownCmdHandler(char** parsed);
+void openHelp();
+void execArgsPiped(char** parsed, char** parsedpipe);
+void execArgs(char** parsed);
+void printDir();
+int takeInput(char* str);
 
 #endif
 
