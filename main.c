@@ -2,19 +2,20 @@
 
 int main() 
 { 
-    char inputString[MAXCOM], *parsedArgs[MAXLIST]; 
+    char *parsedArgs[MAXLIST]; 
+    char *line;
+    size_t size;
     char* parsedArgsPiped[MAXLIST]; 
-    int execFlag = 0; 
-    init_shell(); 
+    int execFlag = 0;  
   
     while (1) { 
         // print shell line 
         printDir(); 
         // take input 
-        if (takeInput(inputString)) 
+        if (getline(&line, &size, stdin)) 
             continue; 
         // process 
-        execFlag = processString(inputString, 
+        execFlag = processString(line, 
         parsedArgs, parsedArgsPiped); 
         // execflag returns zero if there is no command 
         // or it is a builtin command, 
