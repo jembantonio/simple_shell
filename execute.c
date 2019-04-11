@@ -44,5 +44,5 @@ int exec_cmd(char **argv, char **env)
 		_strprnt("no such file or directory\n");
 		return (-1);
 	}
-	return (0);
+	return (run_cmd(path, argv, env));
 }

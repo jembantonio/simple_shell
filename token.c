@@ -22,7 +22,6 @@ size_t token_count(const char *line, const char *delim)
 			index++;
 	}
 
-	printf("count => %lu, index => %d\n", count, index);
 	return (count);
 }
 
