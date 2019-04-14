@@ -11,9 +11,9 @@ printed (int).
 - Use various string commands(arguments) for desired output
 - Program starts with prompt ($) to execute argumetns and returns to prompt ($) upon completion
 ### Format Specifiers
-Function name | Description | Format Specifier
+Command Name | Description | SYNOPSIS
 --- | --- | ---
-`exit` | exits the shell program | `%c`
+`exit` | exit command at the shell prompt will cause the shell to exit | `$ exit`
 `env` | run a program in a modified environment | `env [OPTION]... [-] [NAME=VALUE]... [COMMAND [ARG]...]`
 `ls -l` | Prints a % | `%%`
 `print_d` | Prints  | `%d` & `%i`
