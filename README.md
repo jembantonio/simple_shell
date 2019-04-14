@@ -17,17 +17,9 @@ Command Name | Description | SYNOPSIS
 `env` | run a program in a modified environment | `env [OPTION]... [-] [NAME=VALUE]... [COMMAND [ARG]...]`
 `ls -l` | List information about the FILEs (the current directory by default) | `$ ls [OPTION]... [FILE]... `
 ### Example Usage
-- `$ exit` *exits the shell program*
-- `$ env` *prints "output:
-HOSTNAME=861d736c60b8
-TERM=xterm-256color
-PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/bin:/sbin:.:/usr/share/smlnj/bin
-PWD=/home/cg/root
-SHLVL=1
-HOME=/
-_=/usr/bin/env
-"*
-- `_printf("%d\n", 777)` *printf the decimal number, 777 followed by a new line*
+- `$ exit` *$ exit*
+- `$ env` *prints "PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/bin:/sbin:.:/usr/share/smlnj/bin"*
+- `$ ls -l` *prints files in directory  "bin   dev  home  lib  lost+found  mnt  proc  run   srv  tmp  var"*
 ### Files
 File Name | Description
 --- | ---
