@@ -29,14 +29,13 @@ File Name | Description
 `execute.c` | Functions that processes the commands entered at prompt
 `path.c` | File containing functions that handle manipulation of the path
 `token.c` | File containing functions breaks argument string into separate individual strings
-`buitin_struct.c` | File containing the struct utilized to execute correct function for built-in 
-commands
+`buitin_struct.c` | File containing struct utilized to identify function for built-in cmd
 
 ---
 
 ### About
 This project was created by
-* **Jeremy Antonio** - [GitHub - nokeefe](https://github.com/jembantonio) | [LinkedIn](https://www.linkedin.com/in/nbokeefe/) at [Holberton
+* **Jeremy Antonio** - [GitHub - jembantonio](https://github.com/jembantonio) | [LinkedIn](https://www.linkedin.com/in/jeremyantonio/) at [Holberton
 School](http://holbertonschool.com).
 * **Tywan Brooks** - [GitHub - tlvb25](https://github.com/tlvb25) | [LinkedIn](https://www.linkedin.com/in/tywan-brooks-a3b78716/) at [Holberton
 School](http://holbertonschool.com).
