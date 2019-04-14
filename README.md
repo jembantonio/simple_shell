@@ -9,14 +9,13 @@ printed (int).
 - Includes `shell.h`
 - Calls the program: `simple shell` executes strings of either built-in or non-built-in arguments
 - Use various string commands(arguments) for desired output
-- Program starts with prompt ($) to execute argumetns and returns to prompt ($) upon completion
+- Program starts with prompt ($ ) to execute argumetns and returns to prompt ($ ) upon completion
 ### Format Specifiers
 Command Name | Description | SYNOPSIS
 --- | --- | ---
 `exit` | exit command at the shell prompt will cause the shell to exit | `$ exit`
 `env` | run a program in a modified environment | `env [OPTION]... [-] [NAME=VALUE]... [COMMAND [ARG]...]`
-`ls -l` | Prints a % | `%%`
-`print_d` | Prints  | `%d` & `%i`
+`ls -l` | List information about the FILEs (the current directory by default) | `$ ls [OPTION]... [FILE]... `
 ### Example Usage
 - `_printf("Hello, world\n")` *prints "Hello, world" followed by a new line*
 - `_printf("Hello %s", "Holberton")` *prints "Hello, Holberton"*
