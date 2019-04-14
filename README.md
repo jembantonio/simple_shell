@@ -17,8 +17,8 @@ Command Name | Description | SYNOPSIS
 `env` | run a program in a modified environment | `env [OPTION]... [-] [NAME=VALUE]... [COMMAND [ARG]...]`
 `ls -l` | List information about the FILEs (the current directory by default) | `$ ls [OPTION]... [FILE]... `
 ### Example Usage
-- `$ exit` *exists the shell "$ exit"*
-- `$ env` *prints "PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/bin:/sbin:.:/usr/share/smlnj/bin"*
+- `$ exit` *exists the shell  "$ exit"*
+- `$ env` *prints  "PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/bin:/sbin:.:/usr/share/smlnj/bin"*
 - `$ ls` *prints files in directory  "bin   dev  home  lib mnt  proc  run   srv  tmp  var"*
 ### Files
 File Name | Description
