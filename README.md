@@ -23,10 +23,10 @@ Command Name | Description | SYNOPSIS
 ### Files
 File Name | Description
 --- | ---
-`_printf.c` | Produces an output according to specifiers 
-`helper_function.c` | File containing specifier functions
-`holberton.h` | Header file with function prototypes and struct
-`_putchar.c` | Function to write a char to standard output
+`main.c` | Produces an output according to command arguments typed at prompt 
+`helper.c` | File containing custom functions that mimick several c built-in functions
+`shell.h` | Header file with function prototypes and structs
+`execute.c` | Function to write a char to standard output
 ---
 
 ### About
