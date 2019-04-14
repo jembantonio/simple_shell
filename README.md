@@ -1,4 +1,4 @@
-# _printf
+# Simple Shell
 ##### Recreation of the program [`simple shell`](http://linuxcommand.org/lc3_lts0010.php) from the C Standard Library
 ---
 ### Prototype
@@ -26,12 +26,17 @@ File Name | Description
 `main.c` | Produces an output according to command arguments typed at prompt 
 `helper.c` | File containing custom functions that mimick several c built-in functions
 `shell.h` | Header file with function prototypes and structs
-`execute.c` | Function to write a char to standard output
+`execute.c` | Functions that processes the commands entered at prompt
+`path.c` | File containing functions that handle manipulation of the path
+`token.c` | File containing functions breaks argument string into separate individual strings
+`buitin_struct.c` | File containing the struct utilized to execute correct function for built-in 
+commands
+
 ---
 
 ### About
 This project was created by
-* **Jeremy Antonio** - [GitHub - nokeefe](https://github.com/nokeefe) | [LinkedIn](https://www.linkedin.com/in/nbokeefe/) at [Holberton
+* **Jeremy Antonio** - [GitHub - nokeefe](https://github.com/jembantonio) | [LinkedIn](https://www.linkedin.com/in/nbokeefe/) at [Holberton
 School](http://holbertonschool.com).
 * **Tywan Brooks** - [GitHub - tlvb25](https://github.com/tlvb25) | [LinkedIn](https://www.linkedin.com/in/tywan-brooks-a3b78716/) at [Holberton
 School](http://holbertonschool.com).
@@ -39,4 +44,4 @@ School](http://holbertonschool.com).
 All files were created and compiled on `Ubuntu 14.04.4 LTS` using `GCC 4.8.4` with
 the following flags:
 
-`-Wall -Werror -Wextra -Wno-format -pedantic`.
+`gcc -Wall -Werror -Wextra -pedantic *.c -o hsh`.
