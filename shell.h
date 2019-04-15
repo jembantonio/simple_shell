@@ -22,5 +22,6 @@ char *_strdup(const char *s);
 char *_getenv(char **env, char *key);
 char *find_cmd(char *cmd, char **env);
 void print_tokenizestr(char **arrstr);
+int _strcmp(char *s1, char *s2);
 
 #endif
