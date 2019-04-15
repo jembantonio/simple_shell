@@ -6,7 +6,7 @@ char *_getenv(char **env, char *key)
 
 	for (i = 0; env && env[i]; i++)
 	{
-		if (_strcmp(env[i], key, _strlen(key)) == 0)
+		if (_strncmp(env[i], key, _strlen(key)) == 0)
 
 			return (_strdup(env[i] + _strlen(key)));
 	}
