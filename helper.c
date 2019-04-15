@@ -49,7 +49,7 @@ char *_strdup(const char *s)
 	if (!s)
 		return(NULL);
 
-	new = malloc(_strlen(s));
+	new = malloc(_strlen(s) + 1);
 	_strcpy(new, s, len);
 
 	new[len] = 0;

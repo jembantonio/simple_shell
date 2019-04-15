@@ -21,8 +21,8 @@ static char *append_path(const char *dir, const char *file)
 	size_t dir_len = _strlen(dir);
 	size_t file_len = _strlen(file);
 
-	path_len = dir_len + 1 + file_len + 1;
-	path = malloc(path_len);
+	path_len = dir_len + 1 + file_len;
+	path = malloc(path_len + 1);
 
 	_strcpy(path, dir, dir_len);
 	path[dir_len] = '/';
@@ -37,6 +37,7 @@ char *find_cmd(char *cmd, char **env)
 	char *env_path = NULL;
 	char **dirs = NULL;
 	size_t index;
+	char *path = NULL;
 
 	env_path = _getenv(env, "PATH=");
 	if (!env_path)
@@ -50,12 +51,15 @@ char *find_cmd(char *cmd, char **env)
 
 		curr_path = append_path(dirs[index], cmd);
 		if (access(curr_path, X_OK) == 0)
-			return (curr_path);
+		{
+			path = curr_path;
+			break;
+		}
 		free(curr_path);
 	}
-
+	free(dirs);
 	free(env_path);
 
 	(void)cmd;
-	return (NULL);
+	return (path);
 }

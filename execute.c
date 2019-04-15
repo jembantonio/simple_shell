@@ -26,7 +26,7 @@ int run_cmd(const char *path, char **argv, char **env)
 
 int exec_cmd(char **argv, char **env)
 {
-	const char *path = argv[0];
+	char *path = argv[0];
 
 	if (path[0] == '/' || path[0] == '.')
 	{
@@ -35,14 +35,14 @@ int exec_cmd(char **argv, char **env)
 			return (run_cmd(path, argv, env));
 		}
 		_strprnt("no such file or directory\n");
-		return (-1);
+		return (127);
 	}
 
 	path = find_cmd(argv[0], env);
 	if (!path)
 	{
 		_strprnt("no such file or directory\n");
-		return (-1);
+		return (127);
 	}
 	return (run_cmd(path, argv, env));
 }
