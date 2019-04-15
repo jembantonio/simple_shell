@@ -25,10 +25,9 @@ int exec_cmd(char **argv, char **envp);
 int _strcmp(char *s1, const char *s2, int n);
 void _strcpy(char *dest, const char *src, size_t n);
 char *_strdup(const char *s);
-char *_getenv(char **env, char *key);
-char *find_cmd(char *cmd, char **env);
-int (*builtin_struct(char *cmd))(char *str);
-void _printPrompt(); // This is a function that im testing out
 void exit_builtin();
+void env_builtin();
+
+
 #endif
 

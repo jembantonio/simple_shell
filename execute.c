@@ -46,3 +46,13 @@ int exec_cmd(char **argv, char **env)
 	}
 	return (0);
 }
+
+void exit_builtin()
+{
+        exit(0);
+}
+
+void env_builtin()
+{
+        
+}
