@@ -9,6 +9,12 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
+typedef struct cmd
+{
+	char *cmd;
+	int (*f)(char *str);
+} cmd_struct;
+
 
 int _strprnt (char *str);
 int _strlen (const char *str);
@@ -19,6 +25,8 @@ int exec_cmd(char **argv, char **envp);
 int _strcmp(char *s1, const char *s2, int n);
 void _strcpy(char *dest, const char *src, size_t n);
 char *_strdup(const char *s);
+void exit_builtin();
+void env_builtin();
 
 
 #endif
