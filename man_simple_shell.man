@@ -1,4 +1,4 @@
-.TH Simple_Shell 3 18/April/2019 "0.32" "Simple Shell man page"
+.TH Simple_Shell 18/April/2019 "1.0.0" "Simple Shell man page"
 .SH NAME
 Simple Shell \- an Interface that gathers input from you and executes programs based on that input
 .SH SYNOPSIS
