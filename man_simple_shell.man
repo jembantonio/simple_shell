@@ -2,7 +2,7 @@
 .SH NAME
 _printf \- format and print data from input
 .SH SYNOPSIS
-#include "holberton.h"
+#include "shell.h"
 
 int _printf(const char *format, ...);
 
@@ -14,6 +14,9 @@ int _printf(const char *format, ...);
 .SH DESCRIPTION
 
 Print ARGURMENT(s) according to FORMAT, or execute according to OPTION:
+A Shell provides you with an interface to the Unix system. It gathers input from you and executes programs based on that input. When a program finishes executing, it displays that program's output.
+
+Shell is an environment in which we can run our commands, programs, and shell scripts. There are different flavors of a shell, just as there are different flavors of operating systems. Each flavor of shell has its own set of recognized commands and functions.
 
 \fB\-\-help\fR display this help and exit
 
