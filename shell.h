@@ -16,7 +16,7 @@ char **tokenize (char *line, const char *delim);
 char find_delim(const char c, const char *delim);
 size_t token_count(const char *line, const char *delim);
 int exec_cmd(char **argv, char **envp);
-int _strcmp(char *s1, const char *s2, int n);
+int _strncmp(char *s1, const char *s2, int n);
 void _strcpy(char *dest, const char *src, size_t n);
 char *_strdup(const char *s);
 char *_getenv(char **env, char *key);
