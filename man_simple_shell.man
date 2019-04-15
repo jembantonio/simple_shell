@@ -1,6 +1,6 @@
 .TH Simple_Shell 3 18/April/2019 "0.32" "Simple Shell man page"
 .SH NAME
-_printf \- format and print data from input
+simple shell \- an Interface that gathers input from you and executes programs based on that input
 .SH SYNOPSIS
 #include "shell.h"
 
@@ -13,7 +13,7 @@ int _printf(const char *format, ...);
 
 .SH DESCRIPTION
 
-Print ARGURMENT(s) according to FORMAT, or execute according to OPTION:
+Print ARGURMENT(s) according to OPTIONS(tags), or execute according to OPTION:
 A Shell provides you with an interface to the Unix system. It gathers input from you and executes programs based on that input. When a program finishes executing, it displays that program's output.
 
 Shell is an environment in which we can run our commands, programs, and shell scripts. There are different flavors of a shell, just as there are different flavors of operating systems. Each flavor of shell has its own set of recognized commands and functions.
@@ -22,30 +22,18 @@ Shell is an environment in which we can run our commands, programs, and shell sc
 
 \fB\-\-version\fR output version information and exit
 
-FORMAT controls the output as in C _printf. Interpreted sequences are:
+OPTIONS(tags) control the output of ARGUMENT(s) typed within the simple shell. Interpreted sequences are:
 
-.B %
+.B ls
 a % followed by a % will print a single %. Any other cases are not currently able to be handled
 
-.B %c
-will print a single character given as an argument.
+.B ls -l
+will print the .
 
-.B %s
+.B env
 will print a string of any length given as an argument.
 
-.B %d
-and
-.B %i
-will both print out a number given as an argument. The number given can be positive or negative.
 
-.B %b
-will take an integer in as an argument, convert it to binary, and then print the number in binary form.
-
-.B %r
-will take a string as an argument, and print that string in reverse.
-
-.B %R
-will take a string as an argument, convert it to rot13, and print it.
 
 
 .SH AUTHOR

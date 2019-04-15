@@ -11,9 +11,9 @@
 
 typedef struct cmd
 {
-	char *cmd;
-	int (*f)(char *str);
-} cmd_struct;
+	char **args;
+	int (*f)(char **args);
+} builtin_cmd;
 
 
 int _strprnt (char *str);
@@ -25,7 +25,10 @@ int exec_cmd(char **argv, char **envp);
 int _strcmp(char *s1, const char *s2, int n);
 void _strcpy(char *dest, const char *src, size_t n);
 char *_strdup(const char *s);
-void exit_builtin();
+
+// Functions added 
+int builtin_struct(char **args, int *status);
+void exit_builtin(char **argv);
 void env_builtin();
 
 
