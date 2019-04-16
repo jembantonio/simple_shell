@@ -14,9 +14,10 @@ int main (int ac, char **av, char **env)
 
 
 		/* prints prompt */
-		_strprnt("$ ");
-		/* gets line from user input stores it into a char * */
+		if (isatty(STDIN_FILENO) == 1)
+			_strprnt("$ ");
 
+		/* gets line from user input stores it into a char * */
 		getline(&line, &size, stdin);
 
 		/* function that tokenizes the user input into seperate tokens
