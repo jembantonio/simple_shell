@@ -23,7 +23,7 @@ Command Name | Description | SYNOPSIS
 ### Files
 File Name | Description
 --- | ---
-`main.c` | Produces an output according to command arguments typed at prompt 
+`main.c` | Produces an output according to command arguments typed at prompt
 `helper.c` | File containing custom functions that mimick several c built-in functions
 `shell.h` | Header file with function prototypes and structs
 `execute.c` | Functions that processes the commands entered at prompt
