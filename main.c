@@ -1,6 +1,15 @@
 #include "shell.h"
 
-int main (int ac, char **av, char **env)
+/**
+* main - entry point of the program
+* @ac: unused
+* @av: unused
+* @env: a pointer to the user environment
+*
+* Return: status of the program
+*/
+
+int main(int ac, char **av, char **env)
 {
 	char *line;
 	char **args;
@@ -20,8 +29,8 @@ int main (int ac, char **av, char **env)
 		/* gets line from user input stores it into a char * */
 		getline(&line, &size, stdin);
 
-		/* function that tokenizes the user input into seperate tokens
-		seperated by a NULL terminating byte */
+		/* function that tokenizes the user input into seperate tokens */
+		/* seperated by a NULL terminating byte */
 		args = tokenize(line, " \n\t");
 
 		if (args != NULL)
