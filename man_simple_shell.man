@@ -34,7 +34,7 @@ root@ubuntu:/home/ubuntu#
 .B ls -l
 List information about the FILEs (the current directory by default). Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
 
-.IB OPTIONS
+.IB OPTION(S)
 -l         - use a long listing format.
 
 .B env
