@@ -1,5 +1,14 @@
 #include "shell.h"
 
+/**
+* _getenv - a function that parses throught the entire user environment and
+* returns the $PATH
+* @env: a pointer to the user environment
+* @key: the keyword to find in the user environment
+*
+* Return: User PATH on success
+*/
+
 char *_getenv(char **env, char *key)
 {
 	size_t i;
@@ -13,6 +22,15 @@ char *_getenv(char **env, char *key)
 
 	return (NULL);
 }
+
+/**
+* append_path - a function that appends the file from stdin to the
+* tokenized path of the user
+* @dir: a pointer to a single directory from the user PATH
+* @file: a pointer to the file from stdin
+*
+* Return: the appended path (directory + file)
+*/
 
 static char *append_path(const char *dir, const char *file)
 {
@@ -32,6 +50,18 @@ static char *append_path(const char *dir, const char *file)
 	return (path);
 }
 
+/**
+* find_cmd - a function that first looks for the PATH in the user enviornment.
+* then, tokenizes the directories in the path.
+* then, appends the file from user input to each tokenized directory.
+* then, checks to see if the file exists and it has execute permissions.
+* lastly, it returns the appended path if it exists or NULL if it doesnt exist
+* @cmd: a pointer to the user inputted command
+* @env: a pointer to the user environment
+*
+* Return: appended path if file is executable and exists, NULL if not.
+*/
+
 char *find_cmd(char *cmd, char **env)
 {
 	char *env_path = NULL;
@@ -42,9 +72,9 @@ char *find_cmd(char *cmd, char **env)
 	env_path = _getenv(env, "PATH=");
 	if (!env_path)
 		return (NULL);
-	
+
 	dirs = tokenize(env_path, ":");
-	
+
 	for (index = 0; dirs && dirs[index]; index++)
 	{
 		char *curr_path;
