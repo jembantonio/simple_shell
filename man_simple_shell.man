@@ -2,33 +2,43 @@
 .SH NAME
 Simple Shell \- an Interface that gathers input from you and executes programs based on that input
 .SH SYNOPSIS
-.B Simple Shell
 .I [command] [optional_argument]
 
 .SH DESCRIPTION
 .B Simple Shell
-command-line driven interface to the Unix/Linux system. It gathers input from you and executes programs based on that input. When a program finishes executing, it displays that program's output.
+Simple Shell is an environment in which we can run our commands, programs, and shell scripts. There are different flavors of a shell, just as there are different flavors of operating systems. Each flavor of shell has its own set of recognized commands and functions.
 
-Print ARGURMENT(s) according to OPTIONS(tags), or execute according to OPTION:
-
-
-Shell is an environment in which we can run our commands, programs, and shell scripts. There are different flavors of a shell, just as there are different flavors of operating systems. Each flavor of shell has its own set of recognized commands and functions.
 
 \fB\-\-help\fR display this help and exit
 
 \fB\-\-version\fR output version information and exit
 
-OPTIONS(tags) control the output of ARGUMENT(s) typed within the simple shell. Interpreted sequences are:
 
-.B ls
-a % followed by a % will print a single %. Any other cases are not currently able to be handled
+.SH COMMANDS INCLUDED IN THIS SIMPLE SHELL
+
+.B exit
+Issuing the exit command at the shell prompt will cause the shell to exit.
+
+.IB EXAMPLES
+To exit from shell:
+
+$ exit
+
+output:
+# su ubuntu
+
+ubuntu@ubuntu:~$ exit
+exit
+root@ubuntu:/home/ubuntu#
 
 .B ls -l
-will print the .
+List information about the FILEs (the current directory by default). Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+.IB OPTIONS
+-l         - use a long listing format.
 
 .B env
-will print a string of any length given as an argument.
-
+Runs a program in a modified environment
 
 
 
