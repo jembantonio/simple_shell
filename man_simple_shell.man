@@ -1,46 +1,49 @@
-.TH Simple_Shell 18/April/2019 "1.0.0" "Simple Shell man page"
+./" Manpage for simple_shell
+.TH Simple_Shell 1 "18/April/2019" "1.0.0" "Simple Shell Manual Page"
 .SH NAME
-Simple Shell \- an Interface that gathers input from you and executes programs based on that input
+.B simple_shell - an Interface that gathers input from you and executes programs based on that input
 .SH SYNOPSIS
-.I [command] [optional_argument]
+.B hsh
+[command] [optional_argument]
+
 
 .SH DESCRIPTION
 .B Simple Shell
-Simple Shell is an environment in which we can run our commands, programs, and shell scripts. There are different flavors of a shell, just as there are different flavors of operating systems. Each flavor of shell has its own set of recognized commands and functions.
+is an environment in which we can run our commands, programs, and shell scripts. It behaves similar to a primitive Unix shell with limited functionality. This shell will execute commands read from the user's standard input. To run this program in interactive mode, compile the program with "gcc -Wall -Werror -Wextra -pedantic *.c -o hsh", then run the executable named "./hsh". Then type in a command after the prompt as you would in a Unix shell. This simple shell also has a non-interactive mode where the user can pipe command strings into the executable. There are different flavors of a shell, just as there are different flavors of operating systems. Each flavor of shell has its own set of recognized commands and functions.
 
 
-\fB\-\-help\fR display this help and exit
+.SH EXAMPLE
 
-\fB\-\-version\fR output version information and exit
+To start the program in interactive mode, type "./hsh" into the terminal. A prompt will show up and ask for a user input.
 
+The user can input various commands, for example if the user inputs
+enter--- $ echo simple shell
 
-.SH COMMANDS INCLUDED IN THIS SIMPLE SHELL
+The shell should output
+enter--- $ simple shell
+
+To exit the interactive mode of this program the user can enter Ctrl-D, Ctrl-C or type "exit"
+
+.SH BUILTINS
+The following builtins are supported in this version of simple_shell:
 
 .B exit
 Issuing the exit command at the shell prompt will cause the shell to exit.
 
-.IB EXAMPLES
-To exit from shell:
-
-$ exit
-
-output:
-# su ubuntu
-
-ubuntu@ubuntu:~$ exit
-exit
-root@ubuntu:/home/ubuntu#
-
-.B ls -l
-List information about the FILEs (the current directory by default). Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
-
-.IB OPTION(S)
--l         - use a long listing format.
-
 .B env
-Runs a program in a modified environment
+Issuing the env command will print out the users current enviornment
 
+.SH OPTIONS
+There are no current options for "hsh".
 
+.SH COMMENTS
+This project was done at Holberton School to learn about the Unix Shell. This project is an accumulation of all things learned during the first trimester at Holberton School.
+
+.SH BUGS
+There are no known bugs with this version.
 
 .SH AUTHOR
 Jeremy Antonio, Tywan Brooks
+
+.SH SEE ALSO
+man sh
