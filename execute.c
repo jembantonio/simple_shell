@@ -17,6 +17,12 @@ int run_cmd(const char *path, char **argv, char **env)
 	pid = fork();
 
 	/* child */
+	if (pid == -1)
+	{
+		perror("Error:");
+		exit(1);
+	}
+
 	if (pid == 0)
 	{
 		execve(path, argv, env);
