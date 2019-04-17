@@ -48,7 +48,7 @@ int exec_cmd(char **argv, char **env)
 
 	if (_strcmp(path, "exit") == 0)
 	{
-		free(line);
+		free(argv);
 		exit(1);
 	}
 
