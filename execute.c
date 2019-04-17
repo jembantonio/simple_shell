@@ -17,9 +17,23 @@ int run_cmd(const char *path, char **argv, char **env)
 	pid = fork();
 
 	/* child */
+	if (pid == -1)
+	{
+		perror("Error:");
+		free(argv);
+		free(env);
+		return (1);
+	}
+
 	if (pid == 0)
 	{
-		execve(path, argv, env);
+		if (execve(path, argv, env) == -1)
+		{
+			perror("Error:");
+			free(argv);
+			free(env);
+			exit(0);
+		}
 	}
 
 	/* parent */
@@ -47,8 +61,10 @@ int exec_cmd(char **argv, char **env)
 	char *path = argv[0];
 
 	if (_strcmp(path, "exit") == 0)
+	{
+		free(argv);
 		exit(1);
-
+	}
 
 	if (path[0] == '/' || path[0] == '.')
 	{
