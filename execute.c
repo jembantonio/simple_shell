@@ -47,8 +47,10 @@ int exec_cmd(char **argv, char **env)
 	char *path = argv[0];
 
 	if (_strcmp(path, "exit") == 0)
+	{
+		free(argv);
 		exit(1);
-
+	}
 
 	if (path[0] == '/' || path[0] == '.')
 	{
