@@ -27,7 +27,12 @@ int main(int ac, char **av, char **env)
 			_strprnt("$ ");
 
 		/* gets line from user input stores it into a char * */
-		getline(&line, &size, stdin);
+		if (getline(&line, &size, stdin) == EOF)
+		{
+			if (isatty(0) == 1)
+				_strprnt("\n");
+			break;
+		}
 
 		/* function that tokenizes the user input into seperate tokens */
 		/* seperated by a NULL terminating byte */
