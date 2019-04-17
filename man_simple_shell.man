@@ -1,0 +1,46 @@
+.TH Simple_Shell 18/April/2019 "1.0.0" "Simple Shell man page"
+.SH NAME
+Simple Shell \- an Interface that gathers input from you and executes programs based on that input
+.SH SYNOPSIS
+.I [command] [optional_argument]
+
+.SH DESCRIPTION
+.B Simple Shell
+Simple Shell is an environment in which we can run our commands, programs, and shell scripts. There are different flavors of a shell, just as there are different flavors of operating systems. Each flavor of shell has its own set of recognized commands and functions.
+
+
+\fB\-\-help\fR display this help and exit
+
+\fB\-\-version\fR output version information and exit
+
+
+.SH COMMANDS INCLUDED IN THIS SIMPLE SHELL
+
+.B exit
+Issuing the exit command at the shell prompt will cause the shell to exit.
+
+.IB EXAMPLES
+To exit from shell:
+
+$ exit
+
+output:
+# su ubuntu
+
+ubuntu@ubuntu:~$ exit
+exit
+root@ubuntu:/home/ubuntu#
+
+.B ls -l
+List information about the FILEs (the current directory by default). Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+.IB OPTION(S)
+-l         - use a long listing format.
+
+.B env
+Runs a program in a modified environment
+
+
+
+.SH AUTHOR
+Jeremy Antonio, Tywan Brooks
