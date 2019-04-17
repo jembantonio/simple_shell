@@ -22,11 +22,11 @@ int main(int ac, char **av, char **env)
 		size = 0;
 
 
-		/* prints prompt */
+		/* checks for non-interactive, then prints prompt */
 		if (isatty(STDIN_FILENO) == 1)
 			_strprnt("$ ");
 
-		/* gets line from user input stores it into a char * */
+		/* gets line from user input OR Ctrl -D * */
 		if (getline(&line, &size, stdin) == EOF)
 		{
 			if (isatty(0) == 1)
@@ -35,14 +35,13 @@ int main(int ac, char **av, char **env)
 		}
 
 		/* function that tokenizes the user input into seperate tokens */
-		/* seperated by a NULL terminating byte */
 		args = tokenize(line, " \n\t");
 
 		if (args != NULL)
 		{
 			status = exec_cmd(args, env);
 		}
-		/* free line and arrstr */
+		/* frees both strings line and arrstr */
 		free(line);
 		free(args);
 	}

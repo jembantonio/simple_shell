@@ -59,13 +59,14 @@ int run_cmd(const char *path, char **argv, char **env)
 int exec_cmd(char **argv, char **env)
 {
 	char *path = argv[0];
-
+	/* checks for built-ins here */
 	if (_strcmp(path, "exit") == 0)
 	{
 		free(argv);
 		exit(1);
 	}
 
+	/* checks for absolute path here */
 	if (path[0] == '/' || path[0] == '.')
 	{
 		if (access(path, X_OK) == 0)
@@ -76,7 +77,8 @@ int exec_cmd(char **argv, char **env)
 		return (127);
 	}
 
-	// path = find_cmd(argv[0], env);
+	/* appends the path here */
+	path = find_cmd(argv[0], env);
 	if (!path)
 	{
 		_strprnt("no such file or directory\n");
